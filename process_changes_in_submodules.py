@@ -22,7 +22,7 @@ def check_changes(directory, root_directory):
         status_output = result.stdout
 
         # Check if there are any changes
-        changes_detected = any(line.startswith(("??", "A", "M", "D")) for line in status_output.splitlines())
+        changes_detected = any(line.strip().startswith(("??", "A", "M", "D")) for line in status_output.splitlines())
 
         if changes_detected:
             print("\n    Summary of changes:")
