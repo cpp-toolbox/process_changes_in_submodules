@@ -26,7 +26,8 @@ def check_changes(directory, root_directory):
 
         if changes_detected:
             print("\n    Summary of changes:")
-            print(f"    {status_output.replace('\n', '\n    ')}")
+            replaced = status_output.replace('\n', '\n    ')
+            print(f"    {replaced}")
         else:
             print(f"\n    No significant changes in {directory}")
 
